@@ -14,6 +14,7 @@ import { ToolNode } from '@langchain/langgraph/prebuilt';
 import {
   BaseMessage,
   HumanMessage,
+  MessageContentText,
   SystemMessage,
 } from '@langchain/core/messages';
 import { SYSTEM_PROMPT_TEMPLATE } from './prompts';
@@ -162,7 +163,7 @@ async function assistant(
     // ...messages,
   ]);
 
-  // console.log([response]);
+  console.log((response.content[0] as MessageContentText).text);
   // We return an object with a messages property, because this will get added to the existing list
   return { messages: [response] };
 }
