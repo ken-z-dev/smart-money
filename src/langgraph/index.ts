@@ -139,7 +139,7 @@ async function assistant(
         input:
           'USDt has an APR of 0.987%, I have looped 1 times; USDC has an APR of 0.643%, I have looped 0 times. Which function will you call with which coin?',
         output:
-          'because both coins have positive apr, and usdt\'s apr > uscd\'s apr and you have already looped this coin, so I will continue looping it, so I must call defi_function function with looping functionName and USDt symbolCoin',
+          "because both coins have positive apr, and usdt's apr > uscd's apr and you have already looped this coin, so I will continue looping it, so I must call defi_function function with looping functionName and USDt symbolCoin",
       },
     ],
     suffix: 'Human: {input}',
@@ -162,7 +162,7 @@ async function assistant(
     // ...messages,
   ]);
 
-  console.log([response]);
+  // console.log([response]);
   // We return an object with a messages property, because this will get added to the existing list
   return { messages: [response] };
 }
