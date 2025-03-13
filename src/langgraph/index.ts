@@ -57,17 +57,17 @@ async function assistant(
       );
   }
 
-  for (let coin of [
-    ['USDt', 0.83, 0],
-    ['USDC', 0.94, 1],
-  ]) {
-    messages.push(
-      `${coin[0]} has an APR of ${coin[1]}%, i have looped ${coin[2]} times`,
-    ),
-      console.log(
-        `${coin[0]} has an APR of ${coin[1]}%, i have looped ${coin[2]} times`,
-      );
-  }
+  // for (let coin of [
+  //   ['USDt', 0.83, 0],
+  //   ['USDC', 0.94, 1],
+  // ]) {
+  //   messages.push(
+  //     `${coin[0]} has an APR of ${coin[1]}%, i have looped ${coin[2]} times`,
+  //   ),
+  //     console.log(
+  //       `${coin[0]} has an APR of ${coin[1]}%, i have looped ${coin[2]} times`,
+  //     );
+  // }
   // console.log(`assistant::${messages}`);
 
   const examplePrompt = ChatPromptTemplate.fromTemplate(`Human: {input}
@@ -156,7 +156,7 @@ async function assistant(
     // ...messages,
   ]);
 
-  // console.log([response]);
+  console.log([response]);
   // We return an object with a messages property, because this will get added to the existing list
   return { messages: [response] };
 }
